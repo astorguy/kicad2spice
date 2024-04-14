@@ -1,0 +1,85 @@
+# Configuration for creating netlist and SVG from Kicad schematiic
+# set arguments for ki2ng.py script in this file
+
+# Top-level settings
+[GLOBAL]
+KICAD_CMD = "/usr/bin/kicad-cli"   # path to kicad-cli
+PROJECT = "LASER_DRIVER"    # this name matches the section name below
+
+[LASER_DRIVER]
+SCHEMATIC_LOC = "/workspaces/kicad_ngspice/examples/from_kicad_distribution/laser_driver"
+SCHEMATIC_NAME = "laser_driver.kicad_sch"
+NETLIST_LOC = "/workspaces/kicad_ngspice/examples/from_kicad_distribution/laser_driver"
+NETLIST_NAME = "dut.cir"
+DEL_SLASHES = true # kicad puts annoying "/" in front of all net names
+DUT = true  # true will delete .title (first line) and .end (last line) from netlist
+DEL_INCLUDES = true  # true will delete .include lines from netlist
+DEL_MODELS = true  # true will delete .model lines from netlist
+SVG_LOC = "/workspaces/kicad_ngspice/examples/from_kicad_distribution/laser_driver"
+SVG_NAME = "dut.svg"    # name of SVG file. Set to "" to not create SVG
+SVG_WIDTH = 400 # width in mm
+
+[PSPICE]
+SCHEMATIC_LOC = "/workspaces/kicad_ngspice/examples/from_kicad_distribution/pspice"
+SCHEMATIC_NAME = "pspice.kicad_sch"
+NETLIST_LOC = "/workspaces/kicad_ngspice/examples/from_kicad_distribution/pspice"
+NETLIST_NAME = "dut.cir"
+DEL_SLASHES = true # kicad puts annoying "/" in front of all net names
+DUT = true  # true will delete .title (first line) and .end (last line) from netlist
+DEL_INCLUDES = true  # true will delete .include lines from netlist
+DEL_MODELS = true  # true will delete .model lines from netlist
+SVG_LOC = "/workspaces/kicad_ngspice/examples/from_kicad_distribution/pspice"
+SVG_NAME = "dut.svg"    # name of SVG file. Set to "" to not create SVG
+SVG_WIDTH = 400 # width in mm
+
+[RECTIFIER]
+SCHEMATIC_LOC = "/workspaces/kicad_ngspice/examples/from_kicad_distribution/rectifier"
+SCHEMATIC_NAME = "rectifier.kicad_sch"
+NETLIST_LOC = "/workspaces/kicad_ngspice/examples/from_kicad_distribution/rectifier"
+NETLIST_NAME = "dut.cir"
+DEL_SLASHES = true # kicad puts annoying "/" in front of all net names
+DUT = true  # true will delete .title (first line) and .end (last line) from netlist
+DEL_INCLUDES = true  # true will delete .include lines from netlist
+DEL_MODELS = true  # true will delete .model lines from netlist
+SVG_LOC = "/workspaces/kicad_ngspice/examples/from_kicad_distribution/rectifier"
+SVG_NAME = "dut.svg"    # name of SVG file. Set to "" to not create SVG
+SVG_WIDTH = 400 # width in mm
+
+[SALLEN_KEY]
+SCHEMATIC_LOC = "/workspaces/kicad_ngspice/examples/from_kicad_distribution/sallen_key"
+SCHEMATIC_NAME = "sallen_key.kicad_sch"
+NETLIST_LOC = "/workspaces/kicad_ngspice/examples/from_kicad_distribution/sallen_key"
+NETLIST_NAME = "dut.cir"
+DEL_SLASHES = true # kicad puts annoying "/" in front of all net names
+DUT = true  # true will delete .title (first line) and .end (last line) from netlist
+DEL_INCLUDES = true  # true will delete .include lines from netlist
+DEL_MODELS = true  # true will delete .model lines from netlist
+SVG_LOC = "/workspaces/kicad_ngspice/examples/from_kicad_distribution/sallen_key"
+SVG_NAME = "dut.svg"    # name of SVG file. Set to "" to not create SVG
+SVG_WIDTH = 400 # width in mm
+
+[SUBSHEETS]
+SCHEMATIC_LOC = "/workspaces/kicad_ngspice/examples/from_kicad_distribution/subsheets"
+SCHEMATIC_NAME = "subsheets.kicad_sch"
+NETLIST_LOC = "/workspaces/kicad_ngspice/examples/from_kicad_distribution/subsheets"
+NETLIST_NAME = "dut.cir"
+DEL_SLASHES = true # kicad puts annoying "/" in front of all net names
+DUT = true  # true will delete .title (first line) and .end (last line) from netlist
+DEL_INCLUDES = true  # true will delete .include lines from netlist
+DEL_MODELS = true  # true will delete .model lines from netlist
+SVG_LOC = "/workspaces/kicad_ngspice/examples/from_kicad_distribution/subsheets"
+SVG_NAME = "dut.svg"    # name of SVG file. Set to "" to not create SVG
+SVG_WIDTH = 400 # width in mm
+
+[V_I_SOURCES]
+SCHEMATIC_LOC = "/workspaces/kicad_ngspice/examples/from_kicad_distribution/v_i_sources"
+SCHEMATIC_NAME = "v_i_sources.kicad_sch"
+NETLIST_LOC = "/workspaces/kicad_ngspice/examples/from_kicad_distribution/v_i_sources"
+NETLIST_NAME = "dut.cir"
+DEL_SLASHES = true # kicad puts annoying "/" in front of all net names
+DUT = true  # true will delete .title (first line) and .end (last line) from netlist
+DEL_INCLUDES = true  # true will delete .include lines from netlist
+DEL_MODELS = true  # true will delete .model lines from netlist
+SVG_LOC = "/workspaces/kicad_ngspice/examples/from_kicad_distribution/v_i_sources"
+SVG_NAME = "dut.svg"    # name of SVG file. Set to "" to not create SVG
+SVG_WIDTH = 400 # width in mm
