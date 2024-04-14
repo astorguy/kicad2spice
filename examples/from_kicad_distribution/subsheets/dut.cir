@@ -1,0 +1,15 @@
+.tran 1u 10m
+
+R3 out1 GND 1k
+V1 GND in SINE(0 1.5 1k 0 0 0 0)
+R2 out2 GND 1k
+C1 subsheet1/in GND 1u
+R1 in subsheet1/in 100
+R6 subsheet1/mid out1 100
+C2 subsheet1/mid GND 1u
+R4 subsheet1/in subsheet1/mid 100
+R7 Net-_C3-Pad1_ out2 1k
+R9 Net-_C3-Pad1_ subsheet2/node 1k
+R8 Net-_C3-Pad1_ subsheet2/node 1k
+R5 in Net-_C3-Pad1_ 1k
+C3 Net-_C3-Pad1_ GND 10u
