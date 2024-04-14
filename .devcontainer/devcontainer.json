@@ -1,0 +1,57 @@
+{
+  // "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
+  "name": "debian12_python3_12_ngspice",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "hostRequirements": {
+    "cpus": 2
+  },
+  "waitFor": "onCreateCommand",
+  // "postCreateCommand": "cp /app/.bashrc ~ && source ~/.bashrc",
+  "postCreateCommand": "echo \"alias ki='python /workspaces/kicad_ngspice/kicad2ngspice.py'\" >> ~/.bashrc && source ~/.bashrc",
+  "customizations": {
+    "codespaces": {
+      "openFiles": []
+    },
+    "vscode": {
+      "extensions": [
+        "github.copilot",
+        "njpwerner.autodocstring",
+        "naumovs.color-highlight",
+        "ms-azuretools.vscode-docker",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.black-formatter",
+        "ms-python.flake8",
+        "ms-python.isort",
+        "ms-toolsai.jupyter",
+        "wesbos.theme-cobalt2",
+        "xuanli.spice",
+        "tamasfe.even-better-toml"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "editor.formatOnSave": true,
+        "python.analysis.typeCheckingMode": "basic",
+        "python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
+        "python.formatting.blackPath": "/usr/local/py-utils/bin/black",
+        "python.formatting.yapfPath": "/usr/local/py-utils/bin/yapf",
+        "workbench.colorTheme": "Cobalt2",
+        "python.formatting.provider": "none",
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.black-formatter",
+          "editor.formatOnSave": true,
+          "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+          }
+        },
+        "isort.args": [
+          "--profile",
+          "black"
+        ]
+      }
+    }
+  }
+}
